@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Noto+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href=".favicon/site.webmanifest">
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+
+	<div>
+		<div class="flex-content">
+			<div class="switch-wrap">
+				<div id="switch" class="hover-target">
+					<div id="circle"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="container" id="app">
+<!--- Header start -->
+
+		<div class="flex-content">
+			<h1 class="all-caps">Title goes here</h1>
+			<ul class="margin-bottom-md">
+				<li>
+					<p class="font-color-winter-green">Subtitle/Hook line</p>
+				</li>
+				<li>
+					<p class="font-color-light-gray-super">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Nesciunt ab iure dignissimos mollitia numquam sequi aut esse soluta sint! Assumenda facere
+						voluptas ducimus aliquam veritatis ad blanditiis dolorem ex! Saepe!</p>
+				</li>
+			</ul>
+		</div>
+
+<!--- Header end -->
+<!--- Menu items start -->
+
+		<div class="navbar navbar-default" id="navbar">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav menu">
+					<li :class="{active: route == 'home'}"><a @click="goto('home')">One</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+<!--- Menu items end -->
+
+
+
+<!--dynamic content-->
+<!--- Pages - each route is page -->
+
+
+<!--- home route-->
+		<div v-if="route == 'home'">
+			<main class="flex-container">
+				<section class="flex-column">
+					<div class="flex-content">
+						<h2 class="margin-bottom-xs ">Example Section</h2>
+						<ul class="margin-bottom-md">
+
+<!--item start-->			<li class="margin-bottom-xs font-color-winter-green">Example Title
+								<a class="link-btn margin-right-xs hover-target" href="https://google.com"
+									target="_Blank">link</a>
+								<span class="font-color-green">font-color-blue</span>, <span
+									class="font-color-aqua">font-color-aqua
+								</span>
+								<p class="margin-bottom-sm font-color-light-gray-super">Lorem ipsum dolor, sit amet
+									consectetur adipisicing elit. Beatae
+									distinctio non consequatur ut quam, ab ipsam molestias. Facere quibusdam fugit
+									accusamus iusto, impedit
+									voluptatibus laborum nihil autem inventore? Minima, quos.</p>
+
+							
+<!--item ends--> 			</li>
+
+						</ul>
+					</div>
+				</section>
+			</main>
+		</div>
+<!--- home route end -->
+
+
+<!--dynamic content-->
+
+<!-- footer start -->
+
+		<footer>
+			<h2 class="margin-bottom-xs ">Socialize</h2>
+			<p class="font-color-light-gray-super">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
+				distinctio non consequatur ut quam, ab ipsam molestias. Facere quibusdam fugit accusamus iusto, impedit
+				voluptatibus laborum nihil autem inventore? Minima, quos.</p>
+			<ul class="margin-bottom-md">
+				<li class="margin-bottom-xs"><a href="https://github.com" target="_Blank" class="hover-target">github</a></li>
+			</ul>
+		</footer>
+<!-- footer end -->
+
+
+	</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="./script.js"></script>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.7/vue.js'></script>
+	<script src='menu.js'></script>
+
+</body>
+
+</html>
